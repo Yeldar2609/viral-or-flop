@@ -13,6 +13,21 @@ export function RoundControls({ game, stake, pending, onStake, onAdvance }: Prop
   const result = game.lastResult;
   return revealed && result ? (
     <section className={`result-panel ${result.won ? "win" : "loss"}`} aria-live="polite">
+      {result.won && (
+        <div className="win-burst" aria-hidden="true">
+          {Array.from({ length: 18 }, (_, index) => (
+            <i
+              key={index}
+              style={{
+                left: `${6 + index * 5}%`,
+                animationDelay: `${(index % 5) * 45}ms`,
+                transform: `rotate(${index * 31}deg)`,
+              }}
+            />
+          ))}
+          <strong className="coin-reward">+{result.stake} coins!</strong>
+        </div>
+      )}
       <span className="result-icon">
         {result.won ? <Lightning weight="fill" size={28} /> : <ChartBar weight="fill" size={28} />}
       </span>
