@@ -1,5 +1,6 @@
 import { Coins, Fire, Info, Lightning, SpeakerHigh, SpeakerSlash } from "@phosphor-icons/react";
 import type { GameState } from "../game/engine";
+import { WalletControl } from "./WalletControl";
 
 type Props = {
   readonly game: GameState;
@@ -48,6 +49,7 @@ export function Header({ game, sound, onToggleSound, onRules }: Props) {
         <button className="icon-button" onClick={onRules} type="button" aria-label="How to play">
           <Info size={23} />
         </button>
+        <WalletControl />
       </div>
     </header>
   );

@@ -26,3 +26,6 @@ Fine borders, dark media frame, card shadow0 4px 16px rgba(22,23,19,.04). Strong
 
 ## 8. Accessibility and scope
 Visible3px focus outline, semantic buttons and headings, exact displayed counts, polite result announcement, no motion dependence. Credits and links to video source after reveal, capture dates surfaced. Third-party embeds may be blocked by network or creator; thumbnails and original source links remain available. Real source counts only; no fake crowd odds, users, leaderboards or performance claims. Coins have no monetary value; historical replay game. Browser-only best streak stored, no user messages/accounts.
+
+## Wallet connection
+Solana Devnet wallet entry uses the existing ink button, Wallet icon and explicit network label. Native dialog reuses modal spacing, focus and Escape handling. States: no installed wallet with official install links; wallet choice; pending approval; connected address and Devnet SOL balance; recoverable connection/RPC errors; disconnected. Balance is separate from virtual game coins. No signing or transfers. On mobile the header wraps controls and keeps every action at least44px. Wallet icons come from registered Wallet Standard providers.

@@ -3,7 +3,36 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "scripts": {"dev":"vite --host 127.0.0.1","build":"tsc --noEmit && vite build","preview":"vite preview --host 127.0.0.1","test":"bun test tests/game.test.ts","check":"biome check src tests","doctor":"react-doctor ."},
-  "dependencies": {"react":"^19.1.1","react-dom":"^19.1.1","@phosphor-icons/react":"^2.1.10","@fontsource-variable/space-grotesk":"^5.2.10"},
-  "devDependencies": {"typescript":"~5.9.2","vite":"^6.3.5","@vitejs/plugin-react":"^4.7.0","@types/react":"^19.1.13","@types/react-dom":"^19.1.9","@types/bun":"^1.2.21","@biomejs/biome":"^2.2.4","@playwright/test":"^1.55.0","react-grab":"latest","react-scan":"latest","react-doctor":"latest"}
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "bun test tests/game.test.ts",
+    "check": "biome check src tests",
+    "doctor": "react-doctor ."
+  },
+  "dependencies": {
+    "@fontsource-variable/space-grotesk": "^5.2.10",
+    "@phosphor-icons/react": "^2.1.10",
+    "@wallet-standard/app": "^1.1.1",
+    "@wallet-standard/base": "^1.1.1",
+    "@wallet-standard/features": "^1.1.1",
+    "ky": "^2.1.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "typescript": "~5.9.2",
+    "vite": "^6.3.5",
+    "@vitejs/plugin-react": "^4.7.0",
+    "@types/react": "^19.1.13",
+    "@types/react-dom": "^19.1.9",
+    "@types/bun": "^1.2.21",
+    "@biomejs/biome": "^2.2.4",
+    "@playwright/test": "^1.55.0",
+    "react-grab": "latest",
+    "react-scan": "latest",
+    "react-doctor": "latest"
+  }
 }

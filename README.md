@@ -33,3 +33,8 @@ Production build is static `dist/`, with relative asset paths and `.nojekyll`. S
 ## Validation
 
 16 domain tests cover payouts, ties, invalid stakes, duplicate settlement, deterministic pair selection and session completion. Browser checks cover an entire ten-round session, both result paths, rule/source dialogs, replay, score sharing, reduced motion, and responsive layouts. Development-only instrumentation dependencies are excluded from production.
+
+## Solana Devnet wallet
+The header supports installed Solana Wallet Standard wallets, shows their public account address and reads SOL balances from the Solana Devnet RPC. Users can refresh, open the Devnet explorer/faucet, and disconnect. Mobile users should open the site in their wallet browser. Connection never signs or sends transactions; game coins remain separate.
+
+References: https://github.com/anza-xyz/wallet-standard and https://solana.com/docs/rpc/http/getbalance .
