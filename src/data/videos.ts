@@ -8,6 +8,7 @@ export type Video = {
   readonly capturedAt: string;
   readonly sourceUrl: string;
   readonly start: number;
+  readonly localClip?: string;
 };
 
 export const videos: readonly Video[] = [
@@ -57,6 +58,7 @@ export const videos: readonly Video[] = [
   },
   {
     id: "sneezing-panda",
+    localClip: "sneezing-panda.mp4",
     youtubeId: "93hq0YU3Gqk",
     title: "Sneezing Baby Panda | Original Video",
     creator: "Wild Candy",

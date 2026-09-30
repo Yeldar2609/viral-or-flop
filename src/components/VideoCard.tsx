@@ -54,13 +54,33 @@ export function VideoCard({ video, side, revealed, pending, selected, winner, st
       <div className="video-media">
         {playing ? (
           <div className="media-frame">
-            <iframe
-              src={embed}
-              title={`Play clip ${letter}: ${video.title}`}
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
-            />
+            {video.localClip ? (
+              <video
+                src={`${import.meta.env.BASE_URL}clips/${video.localClip}`}
+                poster={`${import.meta.env.BASE_URL}thumbnails/${video.youtubeId}.jpg`}
+                controls
+                autoPlay
+                playsInline
+                loop
+                preload="metadata"
+                aria-label={`Play clip ${letter}`}
+              >
+                <track
+                  kind="captions"
+                  src={`${import.meta.env.BASE_URL}clips/sneezing-panda.vtt`}
+                  srcLang="en"
+                  label="English"
+                />
+              </video>
+            ) : (
+              <iframe
+                src={embed}
+                title={`Play clip ${letter}: ${video.title}`}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              />
+            )}
           </div>
         ) : (
           <button
